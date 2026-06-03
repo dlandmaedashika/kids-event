@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>D.landきっず イベント｜2026.7.29(水)｜D.land 前田歯科医院</title>
+<title>みんなでいこう D.landきっず｜2026.7.29(水) リニューアルオープン記念イベント</title>
 <meta name="description" content="前田歯科医院 D.landきっず リニューアルオープン記念キッズイベント。2026年7月29日(水)開催。ゲーム・フォトスポット・歯医者さん体験。参加費無料・要予約。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -75,10 +75,10 @@
   .hero .eyebrow{
     display:inline-block;font-family:'Yomogi',cursive;background:#fff;color:var(--peach-deep);
     font-weight:700;padding:.4rem 1.3rem;border-radius:999px;font-size:.86rem;
-    box-shadow:0 4px 0 #ffd9c4;margin-bottom:1.4rem;
+    box-shadow:0 4px 0 #ffd9c4;margin-bottom:.9rem;
   }
-  .hero h1{
-    font-family:'Yomogi',cursive;font-weight:700;
+  .hero .kicker{font-family:'Yomogi',cursive;color:var(--sky-deep);font-weight:700;font-size:clamp(.95rem,3vw,1.2rem);margin-bottom:.7rem;letter-spacing:.03em}
+  .hero h1{  font-family:'Yomogi',cursive;font-weight:700;
     font-size:clamp(2rem,7vw,3.7rem);line-height:1.4;color:#5a4a3f;
   }
   .hero h1 .pop1{color:var(--peach-deep)}
@@ -225,6 +225,16 @@
   .banner .big{font-size:1.5rem;display:block;font-weight:700}
   .banner .small{font-size:.84rem;color:#a0897a;display:block;margin-top:.3rem;font-family:'Zen Maru Gothic',sans-serif}
   .reserve .note{margin-top:1.3rem;font-size:.86rem;opacity:.9}
+  .confirm-box{max-width:560px;margin:1.6rem auto 0;background:rgba(255,255,255,.16);border:2px solid rgba(255,255,255,.6);border-radius:20px;padding:1.4rem 1.2rem;backdrop-filter:blur(2px)}
+  .confirm-box .confirm-head{font-family:'Yomogi',cursive;font-weight:700;font-size:1.1rem;color:#fff;margin-bottom:.9rem}
+  .confirm-steps{display:flex;align-items:stretch;justify-content:center;gap:.4rem;flex-wrap:wrap}
+  .confirm-steps .step{background:#fff;color:var(--peach-deep);font-weight:700;font-size:.82rem;border-radius:12px;padding:.6rem .7rem;flex:1;min-width:90px;display:flex;flex-direction:column;align-items:center;gap:.25rem;line-height:1.3}
+  .confirm-steps .step b{background:var(--peach);color:#fff;width:1.5rem;height:1.5rem;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.9rem}
+  .confirm-steps .step.done{background:var(--mint-deep);color:#fff}
+  .confirm-steps .step.done b{background:#fff;color:var(--mint-deep)}
+  .confirm-steps .arrow{display:flex;align-items:center;color:#fff;font-size:.9rem;opacity:.9}
+  .confirm-note{font-family:'Klee One',serif;color:#fff;font-size:.92rem;margin-top:1rem;line-height:1.6;background:rgba(180,90,60,.25);border-radius:12px;padding:.7rem .8rem}
+  @media(max-width:480px){.confirm-steps{flex-direction:column} .confirm-steps .arrow{transform:rotate(90deg);justify-content:center}}
   .reserve .tel-note{margin-top:1.1rem;font-family:'Yomogi',cursive;font-size:1rem;opacity:.97}
   .reserve .tel-note a{
     display:inline-block;margin-top:.4rem;color:var(--peach-deep);background:#fff;
@@ -271,9 +281,10 @@
 <header class="hero">
   <span class="cloud c1"></span><span class="cloud c2"></span><span class="cloud c3"></span>
   <div class="hero-inner">
-    <span class="eyebrow">🎈 リニューアルオープン記念</span>
-    <h1>はじめての<span class="pop1">はいしゃさん</span>、<br><span class="pop2">たのしい</span>が いっぱい！</h1>
-    <p class="sub">あそんで、たいけんして、にっこり笑顔に。<br>D.landきっずの スペシャルイベントへ あそびにきてね。</p>
+    <span class="eyebrow">🦷 子どものための歯医者さん</span>
+    <p class="kicker">D.landきっず リニューアルオープン記念</p>
+    <h1>みんなでいこう<br><span class="pop1">D.landきっず</span></h1>
+    <p class="sub">あそんで、たいけんして、にっこり笑顔に。<br>はじめての歯医者さんも、ここなら だいじょうぶ。</p>
     <div class="datechip">
       <span>📅 2026.7.29(水)</span>
       <span class="free">参加費 0円</span>
@@ -375,8 +386,20 @@
     <a class="banner" href="https://docs.google.com/forms/d/e/1FAIpQLScUgXcyWl4HZCWSV8pKIJCT6w2u1kqkA_l0NWbz59QzAxXGEA/viewform?usp=dialog" id="reserveForm" target="_blank" rel="noopener">
       <span class="ico">📝</span>
       <span class="big">いますぐ予約する</span>
-      <span class="small">Googleフォームが開きます（所要 約1分）</span>
+      <span class="small">Googleフォームが開きます（所要 約1分）／送信後に当院からご連絡します</span>
     </a>
+
+    <div class="confirm-box">
+      <p class="confirm-head">📞 ご予約の流れ</p>
+      <div class="confirm-steps">
+        <span class="step"><b>1</b>フォームで お申し込み</span>
+        <span class="arrow">▶</span>
+        <span class="step"><b>2</b>当院から 確認のご連絡</span>
+        <span class="arrow">▶</span>
+        <span class="step done"><b>3</b>ご予約 確定！</span>
+      </div>
+      <p class="confirm-note">フォームの送信だけでは予約は確定しません。<br>当院からの確認のご連絡をもって、ご予約確定とさせていただきます。</p>
+    </div>
 
     <p class="note">※ お申し込みには保護者の方の同伴が必要です。</p>
     <p class="tel-note">お電話でのお問い合わせ・ご予約は<br><a href="tel:08061589548">📱 080-6158-9548（イベント専用）</a></p>
