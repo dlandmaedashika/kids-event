@@ -90,6 +90,7 @@
     font-size:clamp(.9rem,2.6vw,1.1rem);box-shadow:0 4px 0 var(--shadow);
   }
   .hero .datechip .free{background:var(--mint-deep);color:#fff;box-shadow:0 4px 0 #7cae6c}
+  .hero .datechip .age-ok{background:var(--sky-deep);color:#fff;box-shadow:0 4px 0 #4a8298}
   .hero-photo{
     position:relative;z-index:2;max-width:420px;margin:2.2rem auto 0;
     border-radius:26px;overflow:hidden;border:6px solid #fff;
@@ -196,6 +197,7 @@
   .tcard .part{font-family:'Yomogi',cursive;font-weight:700;font-size:.92rem;opacity:.95}
   .tcard .time{font-family:'Yomogi',cursive;font-size:1.7rem;font-weight:700;margin:.3rem 0;line-height:1.1}
   .tcard .age{font-size:.9rem;background:rgba(255,255,255,.28);display:inline-block;padding:.2rem .8rem;border-radius:999px;font-weight:700}
+  .tcard .age-note{display:block;font-size:.78rem;font-weight:700;margin-top:.45rem;opacity:.95}
   .tcard .num{position:absolute;bottom:-1.4rem;right:-.2rem;font-family:'Yomogi',cursive;font-size:5.5rem;font-weight:700;opacity:.2}
 
   /* ギャラリー */
@@ -287,8 +289,9 @@
     <p class="sub">あそんで、たいけんして、にっこり笑顔に。<br>はじめての歯医者さんも、ここなら だいじょうぶ。</p>
     <div class="datechip">
       <span>📅 2026.7.29(水)</span>
-      <span class="free">参加費 0円</span>
+      <span class="free">参加費無料</span>
       <span>要予約</span>
+      <span class="age-ok">小学生以下どなたでも参加OK</span>
     </div>
   </div>
   <figure class="hero-photo">
@@ -354,9 +357,9 @@
     <p class="sec-lead">各回入れ替え制・要予約です。お子さまの年齢やご都合に合わせてどうぞ。</p>
     <div class="time-grid">
       <div class="tcard"><span class="part">1部</span><div class="time">9:30–10:30</div><span class="age">0〜3歳のお友達</span><span class="num">1</span></div>
-      <div class="tcard"><span class="part">2部</span><div class="time">11:00–12:00</div><span class="age">どなたでも</span><span class="num">2</span></div>
-      <div class="tcard"><span class="part">3部</span><div class="time">13:00–14:00</div><span class="age">どなたでも</span><span class="num">3</span></div>
-      <div class="tcard"><span class="part">4部</span><div class="time">14:30–15:30</div><span class="age">どなたでも</span><span class="num">4</span></div>
+      <div class="tcard"><span class="part">2部</span><div class="time">11:00–12:00</div><span class="age">どなたでも</span><span class="age-note">※小学生以下の方対象</span><span class="num">2</span></div>
+      <div class="tcard"><span class="part">3部</span><div class="time">13:00–14:00</div><span class="age">どなたでも</span><span class="age-note">※小学生以下の方対象</span><span class="num">3</span></div>
+      <div class="tcard"><span class="part">4部</span><div class="time">14:30–15:30</div><span class="age">どなたでも</span><span class="age-note">※小学生以下の方対象</span><span class="num">4</span></div>
     </div>
   </div>
 </section>
