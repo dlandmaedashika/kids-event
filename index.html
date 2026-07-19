@@ -199,6 +199,35 @@
   .tcard .age{font-size:.9rem;background:rgba(255,255,255,.28);display:inline-block;padding:.2rem .8rem;border-radius:999px;font-weight:700}
   .tcard .age-note{display:block;font-size:.78rem;font-weight:700;margin-top:.45rem;opacity:.95}
   .tcard .num{position:absolute;bottom:-1.4rem;right:-.2rem;font-family:'Yomogi',cursive;font-size:5.5rem;font-weight:700;opacity:.2}
+  /* 満員カード */
+  .tcard.full{filter:saturate(.55) brightness(.93)}
+  .tcard.full::after{content:'';position:absolute;inset:0;background:rgba(90,74,63,.22);pointer-events:none}
+  .tcard.full > *{position:relative;z-index:2}
+  .tcard .ribbon{
+    position:absolute;top:14px;right:-42px;z-index:5;
+    background:linear-gradient(135deg,#e0525b,#c2333f);color:#fff;
+    font-family:'Yomogi',cursive;font-weight:700;font-size:.95rem;letter-spacing:.08em;
+    padding:.42rem 3.2rem;transform:rotate(34deg);
+    box-shadow:0 3px 10px rgba(120,30,40,.4);
+    border-top:1px dashed rgba(255,255,255,.75);border-bottom:1px dashed rgba(255,255,255,.75);
+  }
+  .tcard .fullnote{
+    display:inline-block;margin-top:.75rem;background:rgba(255,255,255,.92);color:#c2333f;
+    font-weight:700;font-size:.86rem;border-radius:999px;padding:.3rem .95rem;
+    box-shadow:0 3px 0 rgba(150,60,70,.25);
+  }
+  /* 受付中バッジ（残席ありを目立たせる） */
+  .tcard .openbadge{
+    position:absolute;top:1rem;right:1rem;z-index:5;
+    background:#fff;color:var(--mint-deep);font-weight:700;font-size:.8rem;
+    border-radius:999px;padding:.28rem .85rem;box-shadow:0 3px 0 rgba(120,160,110,.35);
+    animation:blink 1.8s ease-in-out infinite;
+  }
+  @keyframes blink{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+  .lead-strong{color:var(--peach-deep);font-size:1.05em}
+  @media(max-width:480px){
+    .tcard .ribbon{font-size:.85rem;padding:.38rem 2.9rem;right:-46px;top:12px}
+  }
 
   /* ギャラリー */
   .gallery{background:var(--cream)}
@@ -354,12 +383,12 @@
 <section class="section schedule" id="schedule">
   <div class="wrap">
     <h2 class="sec-title"><small>TIME TABLE</small>4つの じかんから えらべるよ</h2>
-    <p class="sec-lead">各回入れ替え制・要予約です。お子さまの年齢やご都合に合わせてどうぞ。</p>
+    <p class="sec-lead">各回入れ替え制・要予約です。<br><strong class="lead-strong">おかげさまで 2部・4部は満員となりました🎉</strong><br>1部・3部はまだお席がございます。お早めにどうぞ。</p>
     <div class="time-grid">
-      <div class="tcard"><span class="part">1部</span><div class="time">9:30–10:30</div><span class="age">0〜3歳のお友達</span><span class="num">1</span></div>
-      <div class="tcard"><span class="part">2部</span><div class="time">11:00–12:00</div><span class="age">どなたでも</span><span class="age-note">※小学生以下の方対象</span><span class="num">2</span></div>
-      <div class="tcard"><span class="part">3部</span><div class="time">13:00–14:00</div><span class="age">どなたでも</span><span class="age-note">※小学生以下の方対象</span><span class="num">3</span></div>
-      <div class="tcard"><span class="part">4部</span><div class="time">14:30–15:30</div><span class="age">どなたでも</span><span class="age-note">※小学生以下の方対象</span><span class="num">4</span></div>
+      <div class="tcard"><span class="openbadge">受付中</span><span class="part">1部</span><div class="time">9:30–10:30</div><span class="age">0〜3歳のお友達</span><span class="num">1</span></div>
+      <div class="tcard full"><span class="ribbon">満員御礼</span><span class="part">2部</span><div class="time">11:00–12:00</div><span class="age">どなたでも</span><span class="age-note">※小学生以下の方対象</span><span class="fullnote">🙇 受付終了しました</span><span class="num">2</span></div>
+      <div class="tcard"><span class="openbadge">受付中</span><span class="part">3部</span><div class="time">13:00–14:00</div><span class="age">どなたでも</span><span class="age-note">※小学生以下の方対象</span><span class="num">3</span></div>
+      <div class="tcard full"><span class="ribbon">満員御礼</span><span class="part">4部</span><div class="time">14:30–15:30</div><span class="age">どなたでも</span><span class="age-note">※小学生以下の方対象</span><span class="fullnote">🙇 受付終了しました</span><span class="num">4</span></div>
     </div>
   </div>
 </section>
